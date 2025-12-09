@@ -30,3 +30,9 @@ outbounds:
     direct:
       mode: 4
       fastOpen: true
+masquerade:
+  type: proxy
+  proxy:
+    url:
+    rewriteHost: true
+    insecure: false
