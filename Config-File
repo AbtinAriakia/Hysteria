@@ -24,22 +24,16 @@ auth:
 resolver:
   type: https
   https:
-    addr: 1.1.1.1:443
+    addr: 1.1.1.2:443
     timeout: 10s
-    sni: cloudflare-dns.com
+    sni: security.cloudflare-dns.com
     insecure: false
 acl:
   inline:
-    - reject(all, udp/443)
+    - reject(all,udp/443)
 outbounds:
   - name: ipv4_only
     type: direct
     direct:
       mode: 4
       fastOpen: true
-masquerade:
-  type: proxy
-  proxy:
-    url:
-    rewriteHost: true
-    insecure: false
