@@ -24,9 +24,9 @@ auth:
 resolver:
   type: https
   https:
-    addr: 1.1.1.2:443
+    addr: 1.1.1.1:443
     timeout: 10s
-    sni: security.cloudflare-dns.com
+    sni: cloudflare-dns.com
     insecure: false
 acl:
   inline:
