@@ -2,19 +2,26 @@ listen: :
 tls:
   cert: /root/hfolder/some.crt
   key: /root/hfolder/some.key
-  sniGuard: dns-san
+  sniGuard: disable
+ech:
+  keyPath: /root/hfolder/ech.pem
 obfs:
-  type: salamander
-  salamander:
-    password:
+  type: gecko
+  gecko:
+    password: 
+    minPacketSize: 512
+    maxPacketSize: 1200
 quic:
   initStreamReceiveWindow: 8388608
-  maxStreamReceiveWindow: 16777216
+  maxStreamReceiveWindow: 8388608
   initConnReceiveWindow: 20971520
-  maxConnReceiveWindow: 41943040
+  maxConnReceiveWindow: 20971520
   maxIdleTimeout: 30s
   maxIncomingStreams: 1024
   disablePathMTUDiscovery: false
+congestion:
+  type: bbr
+  bbrProfile: standard
 speedTest: false
 disableUDP: false
 udpIdleTimeout: 60s
