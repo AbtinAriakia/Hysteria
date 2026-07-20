@@ -1,14 +1,14 @@
 listen: :
 tls:
-  cert: /root/hfolder/some.crt
-  key: /root/hfolder/some.key
+  cert: some.crt
+  key: some.key
   sniGuard: disable
 ech:
-  keyPath: /root/hfolder/ech.pem
+  keyPath: ech.pem
 obfs:
   type: gecko
   gecko:
-    password: 
+    password:
     minPacketSize: 512
     maxPacketSize: 1200
 quic:
