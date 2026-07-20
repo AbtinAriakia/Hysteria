@@ -1,17 +1,21 @@
 [Unit]
-Description=Hysteria Service
-After=network.target
+Description=Hysteria Server Service
+After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/root/hfolder/hysteria-linux-amd64 server --config /root/hfolder/config.yaml
-WorkingDirectory=/root/hfolder
-User=root
-Group=root
+ExecStart=/usr/local/bin/hysteria-linux-amd64 server --config /etc/hysteria/config.yaml
+WorkingDirectory=/etc/hysteria
+User=administrator
+Group=administrator
 Environment=HYSTERIA_LOG_LEVEL=info
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
 NoNewPrivileges=true
+LimitNOFILE=infinity
 
 [Install]
 WantedBy=multi-user.target
