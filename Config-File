@@ -17,7 +17,7 @@ quic:
   disablePathMTUDiscovery: false
 congestion:
   type: bbr
-  bbrProfile: standard
+  bbrProfile: aggressive
 speedTest: false
 disableUDP: false
 udpIdleTimeout: 60s
@@ -29,7 +29,7 @@ resolver:
   https:
     addr: 1.1.1.1:443
     timeout: 10s
-    sni: cloudflare-dns.com
+    sni: one.one.one.one
     insecure: false
 acl:
   inline:
