@@ -3,8 +3,6 @@ tls:
   cert: some.crt
   key: some.key
   sniGuard: disable
-ech:
-  keyPath: ech.pem
 obfs:
   type: salamander
   salamander:
