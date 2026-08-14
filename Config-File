@@ -19,7 +19,7 @@ quic:
   disablePathMTUDiscovery: false
 congestion:
   type: bbr
-  bbrProfile: aggressive
+  bbrProfile: standard
 speedTest: false
 disableUDP: false
 udpIdleTimeout: 60s
