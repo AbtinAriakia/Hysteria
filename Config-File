@@ -2,11 +2,13 @@ listen: :
 tls:
   cert: some.crt
   key: some.key
-  sniGuard: disable
+  sniGuard: dns-san
 obfs:
-  type: salamander
-  salamander:
+  type: gecko
+  gecko:
     password:
+    minPacketSize: 512
+    maxPacketSize: 1200
 quic:
   initStreamReceiveWindow: 8388608
   maxStreamReceiveWindow: 8388608
