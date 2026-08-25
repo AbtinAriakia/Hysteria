@@ -17,6 +17,7 @@ quic:
   maxIdleTimeout: 30s
   maxIncomingStreams: 1024
   disablePathMTUDiscovery: false
+  disableStatelessReset: false
 congestion:
   type: bbr
   bbrProfile: standard
