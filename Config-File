@@ -28,7 +28,7 @@ auth:
   type: password
   password:
 outbounds:
-  - name: direct-out
+  - name: direct
     type: direct
     direct:
       mode: auto
