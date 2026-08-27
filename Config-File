@@ -2,7 +2,7 @@ listen: :
 tls:
   cert: some.crt
   key: some.key
-  sniGuard: dns-san
+  sniGuard: strict
 obfs:
   type: gecko
   gecko:
