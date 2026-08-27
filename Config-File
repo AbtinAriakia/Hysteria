@@ -10,12 +10,12 @@ obfs:
     minPacketSize: 512
     maxPacketSize: 1200
 quic:
-  initStreamReceiveWindow: 8388608
-  maxStreamReceiveWindow: 8388608
-  initConnReceiveWindow: 20971520
-  maxConnReceiveWindow: 20971520
+  initStreamReceiveWindow: 6291456
+  maxStreamReceiveWindow: 6291456
+  initConnReceiveWindow: 15728640
+  maxConnReceiveWindow: 15728640
   maxIdleTimeout: 30s
-  maxIncomingStreams: 1024
+  maxIncomingStreams: 100
   disablePathMTUDiscovery: false
   disableStatelessReset: false
 congestion:
