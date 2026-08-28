@@ -31,5 +31,5 @@ outbounds:
   - name: direct
     type: direct
     direct:
-      mode: 4
+      mode: auto
       fastOpen: true
