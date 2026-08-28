@@ -20,7 +20,7 @@ quic:
   disableStatelessReset: false
 congestion:
   type: bbr
-  bbrProfile: standard
+  bbrProfile: aggressive
 speedTest: false
 disableUDP: false
 udpIdleTimeout: 60s
