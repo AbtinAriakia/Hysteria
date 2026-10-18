@@ -25,8 +25,9 @@ speedTest: false
 disableUDP: false
 udpIdleTimeout: 60s
 auth:
-  type: password
-  password:
+  type: userpass
+  userpass:
+    user1: pass1
 outbounds:
   - name: direct-out
     type: direct
